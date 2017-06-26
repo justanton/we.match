@@ -8,9 +8,14 @@ nav.navbar.navbar-default
       ul.nav.navbar-nav
         li
           .logo we.match
-      ul.navbar.navbar-right
-        button.btn.btn-default(type='button', value='Input Button', onclick='registration()') Register
-        button.btn.btn-default(type='button', value='Input Button', onclick='login()') Login
+      if currentUser
+        ul.navbar.navbar-right
+          button.btn.btn-default(type='button', value='Input Button', onclick='profile()') Profile
+          button.btn.btn-default(type='button', value='Input Button', onclick='logout()') Logout
+      else
+        ul.navbar.navbar-right
+          button.btn.btn-default(type='button', value='Input Button', onclick='registration()') Register
+          button.btn.btn-default(type='button', value='Input Button', onclick='login()') Login
     // /.navbar-collapse
   // /.container-fluid
 
@@ -23,5 +28,15 @@ script.
   function login()
   {
     location.href = "/login";
+  }
+
+  function logout()
+  {
+    location.href = "/logout";
+  }
+
+  function profile()
+  {
+    location.href = "/profile";
   }
 
