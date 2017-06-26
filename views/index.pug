@@ -5,5 +5,11 @@ block content
     .hero-text
       h1 Post your in-house project.
       h2 We find just the people you need.
-      button.btn.btn-default.hero-button(type='button') Register
+      button.btn.btn-default.hero-button(type='button', value='Input Button', onclick='registration()') Register
     
+
+  script.
+    function registration()
+    {
+    location.href = "/register";
+    }

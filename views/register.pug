@@ -1,0 +1,25 @@
+extends layout
+ 
+block content
+  .register
+    .row
+      .col-lg-6.col-lg-offset-3
+        form.bs-example.form-horizontal(method='post', action='')
+          fieldset
+            legend Create a new profile to start:
+            if error
+              .alert.alert-dismissable.alert-danger.register-fail
+                button.close(data-dismiss='alert', type='button') ×
+                p.
+                  #{error}
+            .form-group
+              label.col-lg-4.control-label(for='username') Email
+              .col-lg-4
+                input#username.form-control(name='username', type='email', placeholder='Email', autofocus)
+            .form-group
+              label.col-lg-4.control-label(for='password') Password
+              .col-lg-4
+                input#password.form-control(name='password', type='password', placeholder='Password')
+            .form-group
+              .col-lg-10.col-lg-offset-4
+                button.btn.btn-primary(type='submit') Register
