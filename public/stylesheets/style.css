@@ -1,0 +1,69 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/*NAVBAR STYLES*/
+
+.navbar-brand>img {
+  /*position: relative;*/
+  max-height: 50px;  
+  width: auto;
+}
+
+.logo {
+  font-size: 20px;
+  margin: 10px;
+}
+/*END OF NAVBAR STYLES*/
+
+/*HERO STYLES*/
+/* The hero image */
+.hero-image {
+    /* The image used */
+    background-image: url('../images/hero.jpg');
+
+    /* Set a specific height */
+    height: 70%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.hero-text h1 {
+  font-size: 5vh;
+  font-weight: bold;
+}
+.hero-text h2 {
+  font-size: 3vh;
+}
+.hero-button {
+  background-color: transparent;
+  color: white;
+}
+.hero-button:hover {
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+}
