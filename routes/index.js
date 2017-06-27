@@ -77,6 +77,10 @@ router.post("/register", function(req, res, next) {
   failureFlash: true
 }));
 
+router.get('/profile', function(req, res, next) {
+  res.render('profile', { title: 'Your Profile' });
+})
+
 router.get("/users/:username", function(req, res, next) {
   User.findOne({ username: req.params.username }, function(err, user) {
     if (err) { return next(err); }

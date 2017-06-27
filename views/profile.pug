@@ -1,0 +1,41 @@
+extends layout
+
+block content
+ .container
+  .span3.well
+    center
+      a(href='#aboutModal', data-toggle='modal', data-target='#myModal')
+        img.img-circle(src='/images/doge.jpeg', name='aboutme', width='140', height='140')
+      h3 Klaus Doge
+      button.btn.btn-primary.btn-profile(type='button', data-toggle='modal', data-target='#myModal')
+        | Click for details
+  // Modal Original
+  #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-hidden='true')
+          h4#myModalLabel.modal-title
+        .modal-body
+          center
+            img.img-circle(src='/images/doge.jpeg', name='aboutme', width='140', height='140', border='0')
+            h3.media-heading
+              | Klaus Doge   
+              small
+            span
+              strong Skills: 
+            span.label.label-warning HTML5/CSS
+            span.label.label-info Angular
+            span.label.label-info Java
+            span.label.label-success JavaScript
+          hr
+          center
+            p.text-left
+              strong Bio: 
+              br
+              |                         I like spaghetti and meatballs.
+            br
+        .modal-footer
+          center
+            button.btn.btn-default(type='button', data-dismiss='modal') Close
+
